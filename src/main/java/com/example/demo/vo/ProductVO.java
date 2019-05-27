@@ -1,6 +1,7 @@
 package com.example.demo.vo;
 
 import org.apache.ibatis.type.Alias;
+import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;
 
@@ -15,5 +16,5 @@ public class ProductVO {
 	private String productSpec;
 	private String productDescription;
 	private String companyCode;
-
+	private MultipartFile productPath;
 }

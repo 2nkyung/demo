@@ -12,4 +12,6 @@ public interface ProductMapper {
 	int insertProduct(ProductVO product);
 	int deleteProduct(ProductVO product);
 	int updateProduct(ProductVO product);
+	public ProductVO selectProductByCode(ProductVO product);
+	
 }

@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,6 +29,12 @@ public class ProductController {
 	@GetMapping("/products")
 	public List<ProductVO> selectProduct(){
 		return ps.selectProduct();
+	}
+	
+	@CrossOrigin(origins="*")
+	@GetMapping("/product")
+	public ProductVO selectProductByCode(ProductVO product){
+		return ps.selectProductByCode(product);
 	}
 	
 	@CrossOrigin(origins="*")

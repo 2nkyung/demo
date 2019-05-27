@@ -42,4 +42,10 @@ public class ProductServiceImpl implements ProductService {
 		return pm.updateProduct(product);
 	}
 
+	@Override
+	public ProductVO selectProductByCode(ProductVO product) {
+		// TODO Auto-generated method stub
+		return pm.selectProductByCode(product);
+	}
+
 }
